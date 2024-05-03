@@ -2,9 +2,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Bidput - Cleaning & Services</title>
-        <meta name="description" content="Bidput - Cleaning & Services">
-        <meta name="keywords" content="Bidput - Pool Cleaning & Services">
+        <title>Bidput - Cleaning Services</title>
+        <meta name="description" content="Bidput - Cleaning Services">
+        <meta name="keywords" content="Bidput - Cleaning Services">
         <meta name="robots" content="INDEX,FOLLOW">
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
