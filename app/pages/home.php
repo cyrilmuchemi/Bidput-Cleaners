@@ -7,31 +7,31 @@
         <meta name="keywords" content="Bidput - Cleaning Services">
         <meta name="robots" content="INDEX,FOLLOW">
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="144x144" href="assets/img/favicons/android-icon-144x144.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-        <link rel="manifest" href="assets/img/favicons/manifest.json">
+        <link rel="apple-touch-icon" sizes="57x57" href="<?=ROOT?>/assets/img/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="<?=ROOT?>/assets/img/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?=ROOT?>/assets/img/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="<?=ROOT?>/assets/img/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?=ROOT?>/assets/img/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?=ROOT?>/assets/img/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="<?=ROOT?>/assets/img/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?=ROOT?>/assets/img/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?=ROOT?>/assets/img/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="<?=ROOT?>/assets/img/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="<?=ROOT?>/assets/img/favicons/android-icon-144x144.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?=ROOT?>/assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="<?=ROOT?>/assets/img/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?=ROOT?>/assets/img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="<?=ROOT?>/assets/img/favicons/manifest.json">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="theme-color" content="#ffffff">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-        <link rel="stylesheet" href="assets/css/slick.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="<?=ROOT?>/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?=ROOT?>/assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="<?=ROOT?>/assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="<?=ROOT?>/assets/css/slick.min.css">
+        <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
     </head>
     <body>
         <div class="preloader">
@@ -43,7 +43,7 @@
         <div class="th-menu-wrapper">
             <div class="th-menu-area">
                 <div class="mobile-logo">
-                    <img src="assets/img/Bidput.png" alt="Poolax" width="150"></a>
+                    <img src="<?=ROOT?>/assets/img/Bidput.png" alt="Poolax" width="150"></a>
                     <div class="close-menu">
                         <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
                     </div>
@@ -101,7 +101,7 @@
                                 <div class="widget footer-widget">
                                     <div class="th-widget-about">
                                         <div class="about-logo">
-                                            <a href="index.html"><img src="assets/img/logo-white.svg" alt="Poolax"></a>
+                                            <a href="index.html"><img src="<?=ROOT?>/assets/img/logo-white.svg" alt="Poolax"></a>
                                         </div>
                                         <p class="about-text">We provide specialized winterization services to safeguard your pool during the off-season, and when spring arrives, we handle the thorough opening process.</p>
                                         <div class="th-social footer-social">
@@ -119,7 +119,7 @@
                                         <div class="recent-post">
                                             <div class="media-img">
                                                 <a href="blog-details.html">
-                                                    <img src="assets/img/blog/recent-post-2-1.jpg" alt="Blog Image">
+                                                    <img src="<?=ROOT?>/assets/img/blog/recent-post-2-1.jpg" alt="Blog Image">
                                                 </a>
                                             </div>
                                             <div class="media-body">
@@ -134,7 +134,7 @@
                                         <div class="recent-post">
                                             <div class="media-img">
                                                 <a href="blog-details.html">
-                                                    <img src="assets/img/blog/recent-post-2-2.jpg" alt="Blog Image">
+                                                    <img src="<?=ROOT?>/assets/img/blog/recent-post-2-2.jpg" alt="Blog Image">
                                                 </a>
                                             </div>
                                             <div class="media-body">
@@ -207,7 +207,7 @@
                                 <div class="container th-container">
                                     <div class="row align-items-center justify-content-between">
                                         <div class="col-auto"><div class="header-logo">
-                                            <a href="index.html"><img src="assets/img/Bidput.png" alt="Bidput" width="150"></a>
+                                            <a href="index.html"><img src="<?=ROOT?>/assets/img/Bidput.png" alt="Bidput" width="150"></a>
                                             <div class="logo-bg">
                                             </div>
                                         </div>
@@ -247,11 +247,11 @@
                                 </div>
                             </div>
                         </header>
-                        <div class="th-hero-wrapper hero-3" data-bg-src="assets/img/bg/hero_bg_3_1.jpg">
+                        <div class="th-hero-wrapper hero-3" data-bg-src="<?=ROOT?>/assets/img/bg/hero_bg_3_1.jpg">
                             <div class="hero-slider-3 th-carousel" data-slide-show="1" data-md-slide-show="1" data-fade="true">
                                 <div class="th-hero-slide">
                                     <div class="th-hero-bg">
-                                        <img src="assets/img/hero/hero_overlay_3_1.png" alt="Hero Image">
+                                        <img src="<?=ROOT?>/assets/img/hero/hero_overlay_3_1.png" alt="Hero Image">
                                     </div>
                                     <div class="container">
                                         <div class="row align-items-end">
@@ -268,14 +268,14 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-5">
-                                                <div class="th-hero-img" data-ani="slideinup" data-ani-delay="0.4s"><img src="assets/img/hero/hero_bg_3_1.png" alt="">
+                                                <div class="th-hero-img" data-ani="slideinup" data-ani-delay="0.4s"><img src="<?=ROOT?>/assets/img/hero/hero_bg_3_1.png" alt="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="th-hero-slide">
-                                    <div class="th-hero-bg"><img src="assets/img/hero/hero_overlay_3_1.png" alt="Hero Image">
+                                    <div class="th-hero-bg"><img src="<?=ROOT?>/assets/img/hero/hero_overlay_3_1.png" alt="Hero Image">
                                     </div>
                                     <div class="container"><div class="row align-items-end">
                                         <div class="col-lg-7"><div class="hero-style3">
@@ -293,7 +293,7 @@
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="th-hero-img" data-ani="slideinup" data-ani-delay="0.4s">
-                                            <img src="assets/img/hero/hero_bg_3_2.png" alt="">
+                                            <img src="<?=ROOT?>/assets/img/hero/hero_bg_3_2.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -301,7 +301,7 @@
                         </div>
                         <div class="th-hero-slide">
                             <div class="th-hero-bg">
-                                <img src="assets/img/hero/hero_overlay_3_1.png" alt="Hero Image">
+                                <img src="<?=ROOT?>/assets/img/hero/hero_overlay_3_1.png" alt="Hero Image">
                             </div>
                             <div class="container">
                                 <div class="row align-items-end">
@@ -319,7 +319,7 @@
                                     </div>
                                     <div class="col-lg-5">
                                         <div class="th-hero-img" data-ani="slideinup" data-ani-delay="0.4s">
-                                            <img src="assets/img/hero/hero_bg_3_3.png" alt="">
+                                            <img src="<?=ROOT?>/assets/img/hero/hero_bg_3_3.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -381,7 +381,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="service-sec overflow-hidden space" id="service-sec" data-bg-src="assets/img/bg/service_bg_2.jpg">
+                <div class="service-sec overflow-hidden space" id="service-sec" data-bg-src="<?=ROOT?>/assets/img/bg/service_bg_2.jpg">
                     <div class="container">
                         <div class="row justify-content-lg-between justify-content-center align-items-center">
                             <div class="col-lg-7"><div class="title-area text-center text-lg-start">
@@ -403,10 +403,10 @@
                         </div>
                         <div class="row slider-shadow th-carousel" id="serviceSlide" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="1">
                         <div class="col-md-6 col-lg-6">
-                        <div class="service-item" data-bg-src="assets/img/shape/service_shape_4.png">
+                        <div class="service-item" data-bg-src="<?=ROOT?>/assets/img/shape/service_shape_4.png">
                         <div class="service-item_content">
                         <div class="service-item_icon">
-                        <img src="assets/img/icon/service_3_1.svg" alt="Icon">
+                        <img src="<?=ROOT?>/assets/img/icon/service_3_1.svg" alt="Icon">
                         </div>
                         <h3 class="box-title">
                         <a href="service-details.html">House Cleaning</a>
@@ -417,10 +417,10 @@
                         </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                        <div class="service-item" data-bg-src="assets/img/shape/service_shape_4.png">
+                        <div class="service-item" data-bg-src="<?=ROOT?>/assets/img/shape/service_shape_4.png">
                         <div class="service-item_content">
                         <div class="service-item_icon">
-                        <img src="assets/img/icon/service_3_2.svg" alt="Icon">
+                        <img src="<?=ROOT?>/assets/img/icon/service_3_2.svg" alt="Icon">
                         </div>
                         <h3 class="box-title">
                         <a href="service-details.html">Club/Pub Cleaning</a>
@@ -431,10 +431,10 @@
                         </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                        <div class="service-item" data-bg-src="assets/img/shape/service_shape_4.png">
+                        <div class="service-item" data-bg-src="<?=ROOT?>/assets/img/shape/service_shape_4.png">
                         <div class="service-item_content">
                         <div class="service-item_icon">
-                        <img src="assets/img/icon/service_3_3.svg" alt="Icon">
+                        <img src="<?=ROOT?>/assets/img/icon/service_3_3.svg" alt="Icon">
                         </div>
                         <h3 class="box-title">
                         <a href="service-details.html">Hotel Cleaning</a>
@@ -445,10 +445,10 @@
                         </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                        <div class="service-item" data-bg-src="assets/img/shape/service_shape_4.png">
+                        <div class="service-item" data-bg-src="<?=ROOT?>/assets/img/shape/service_shape_4.png">
                         <div class="service-item_content">
                         <div class="service-item_icon">
-                        <img src="assets/img/icon/service_3_4.svg" alt="Icon">
+                        <img src="<?=ROOT?>/assets/img/icon/service_3_4.svg" alt="Icon">
                         </div>
                         <h3 class="box-title">
                         <a href="service-details.html">Commercial Cleaning</a>
@@ -459,10 +459,10 @@
                         </div>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                        <div class="service-item" data-bg-src="assets/img/shape/service_shape_4.png">
+                        <div class="service-item" data-bg-src="<?=ROOT?>/assets/img/shape/service_shape_4.png">
                         <div class="service-item_content">
                         <div class="service-item_icon">
-                        <img src="assets/img/icon/service_3_5.svg" alt="Icon">
+                        <img src="<?=ROOT?>/assets/img/icon/service_3_5.svg" alt="Icon">
                         </div>
                         <h3 class="box-title">
                         <a href="service-details.html">School Cleaning</a>
@@ -480,10 +480,10 @@
                         <div class="row"><div class="col-xl-6">
                         <div class="img-box3">
                         <div class="img3 wow fadeInUp">
-                        <img src="assets/img/normal/about_3_1.jpg" alt="About">
+                        <img src="<?=ROOT?>/assets/img/normal/about_3_1.jpg" alt="About">
                         </div>
                         <div class="img4 wow fadeInRight">
-                        <img src="assets/img/normal/about_3_2.jpg" alt="About">
+                        <img src="<?=ROOT?>/assets/img/normal/about_3_2.jpg" alt="About">
                         </div>
                         <div class="th-experience style2">
                         <h2 class="experience-year">
@@ -502,7 +502,7 @@
                         <div class="achive-about-wrap">
                         <div class="achive-about">
                         <div class="achive-about_icon">
-                        <img src="assets/img/icon/about_1_1.svg" alt="icon">
+                        <img src="<?=ROOT?>/assets/img/icon/about_1_1.svg" alt="icon">
                         </div>
                         <div class="media-body">
                         <h3 class="box-title">Our Mission</h3>
@@ -511,7 +511,7 @@
                         </div>
                         <div class="achive-about">
                         <div class="achive-about_icon">
-                        <img src="assets/img/icon/about_1_2.svg" alt="icon">
+                        <img src="<?=ROOT?>/assets/img/icon/about_1_2.svg" alt="icon">
                         </div>
                         <div class="media-body">
                         <h3 class="box-title">Our Vision</h3>
@@ -527,7 +527,7 @@
                         </div>
                         </div>
                         </div>
-                        <section class="cta-area" data-bg-src="assets/img/bg/cta_bg_1.jpg">
+                        <section class="cta-area" data-bg-src="<?=ROOT?>/assets/img/bg/cta_bg_1.jpg">
                         <div class="container"><div class="row align-items-center">
                         <div class="col-xl-7 col-lg-6 mb-5 mb-lg-0">
                         <div class="title-area mb-0 text-center text-lg-start">
@@ -634,10 +634,10 @@
                         <div class="col-xl-6">
                         <div class="img-box4">
                         <div class="img1">
-                        <img src="assets/img/normal/about_4_1.jpg" alt="About">
+                        <img src="<?=ROOT?>/assets/img/normal/about_4_1.jpg" alt="About">
                         </div>
                         <div class="img2">
-                        <img src="assets/img/normal/about_4_2.jpg" alt="About">
+                        <img src="<?=ROOT?>/assets/img/normal/about_4_2.jpg" alt="About">
                         </div>
                         <div class="why-video">
                         <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video">
@@ -650,7 +650,7 @@
                         </div>
                         </div>
                         </section>
-                        <div class="bg-theme" data-bg-src="assets/img/bg/counter_bg_2.jpg">
+                        <div class="bg-theme" data-bg-src="<?=ROOT?>/assets/img/bg/counter_bg_2.jpg">
                         <div class="container">
                         <div class="counter-sec style2">
                         <div class="th-counterup counter-box style2">
@@ -700,7 +700,7 @@
                         </div>
                         </div>
                         </div>
-                        <section class="team-area overflow-hidden space" data-bg-src="assets/img/bg/team_bg_1.jpg">
+                        <section class="team-area overflow-hidden space" data-bg-src="<?=ROOT?>/assets/img/bg/team_bg_1.jpg">
                         <div class="container">
                         <div class="row align-content-lg-center">
                         <div class="col-xl-4 align-items-xl-center">
@@ -716,7 +716,7 @@
                         <div class="col-xl-8"><div class="row slider-shadow th-carousel number-dots teamSlide" id="teamSlide1" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-xs-slide-show="1" data-dots="true">
                         <div class="col-sm-6 col-lg-4 col-xxl-3">
                         <div class="th-team team-item wow fadeInUp">
-                        <div class="team-img"><img src="assets/img/team/team_3_1.jpg" alt="Team">
+                        <div class="team-img"><img src="<?=ROOT?>/assets/img/team/team_3_1.jpg" alt="Team">
                         </div>
                         <div class="team-item_content">
                         <h3 class="box-title">
@@ -736,7 +736,7 @@
                         <div class="col-sm-6 col-lg-4 col-xxl-3">
                         <div class="th-team team-item wow fadeInUp">
                         <div class="team-img">
-                        <img src="assets/img/team/team_3_2.jpg" alt="Team">
+                        <img src="<?=ROOT?>/assets/img/team/team_3_2.jpg" alt="Team">
                         </div>
                         <div class="team-item_content">
                         <h3 class="box-title">
@@ -766,7 +766,7 @@
                             <div class="col-sm-6 col-lg-4 col-xxl-3">
                             <div class="th-team team-item wow fadeInUp">
                             <div class="team-img">
-                            <img src="assets/img/team/team_3_3.jpg" alt="Team">
+                            <img src="<?=ROOT?>/assets/img/team/team_3_3.jpg" alt="Team">
                             </div>
                             <div class="team-item_content">
                             <h3 class="box-title">
@@ -785,7 +785,7 @@
                             </div>
                             <div class="col-sm-6 col-lg-4 col-xxl-3">
                             <div class="th-team team-item wow fadeInUp">
-                            <div class="team-img"><img src="assets/img/team/team_3_4.jpg" alt="Team">
+                            <div class="team-img"><img src="<?=ROOT?>/assets/img/team/team_3_4.jpg" alt="Team">
                             </div>
                             <div class="team-item_content">
                             <h3 class="box-title"><a href="team-details.html">Daniel Thomas</a></h3>
@@ -803,7 +803,7 @@
                                 <div class="col-sm-6 col-lg-4 col-xxl-3">
                                 <div class="th-team team-item wow fadeInUp">
                                 <div class="team-img">
-                                <img src="assets/img/team/team_3_5.jpg" alt="Team">
+                                <img src="<?=ROOT?>/assets/img/team/team_3_5.jpg" alt="Team">
                                 </div>
                                 <div class="team-item_content">
                                 <h3 class="box-title">
@@ -917,7 +917,7 @@
                 </div>
             </div>
         </section>
-        <section class="project-sec bg-top-center overflow-hidden space-top" id="portfolio-sec" data-bg-src="assets/img/bg/project_bg_1.jpg">
+        <section class="project-sec bg-top-center overflow-hidden space-top" id="portfolio-sec" data-bg-src="<?=ROOT?>/assets/img/bg/project_bg_1.jpg">
             <div class="container">
                 <div class="row justify-content-lg-between justify-content-center align-items-center">
                     <div class="col-lg-7">
@@ -944,7 +944,7 @@
                 <div class="col-xl-4 col-xxl-3">
                     <div class="project-item">
                         <div class="project-img">
-                            <img src="assets/img/project/project_2_1.jpg" alt="project image">
+                            <img src="<?=ROOT?>/assets/img/project/project_2_1.jpg" alt="project image">
                         </div>
                         <div class="project-content">
                             <div class="media-left">
@@ -952,7 +952,7 @@
                                 <h4 class="box-title">
                                     <a href="gallery.html">Pool Water Cleaning</a>
                                 </h4>
-                                <a href="assets/img/project/project_2_1.jpg" class="icon-btn popup-image">
+                                <a href="<?=ROOT?>/assets/img/project/project_2_1.jpg" class="icon-btn popup-image">
                                     <i class="far fa-plus"></i>
                                 </a>
                             </div>
@@ -962,13 +962,13 @@
                 <div class="col-xl-4 col-xxl-3">
                     <div class="project-item">
                         <div class="project-img">
-                            <img src="assets/img/project/project_2_2.jpg" alt="project image">
+                            <img src="<?=ROOT?>/assets/img/project/project_2_2.jpg" alt="project image">
                         </div>
                         <div class="project-content">
                             <div class="media-left">
                                 <span class="project-subtitle">Residential Services</span>
                                 <h4 class="box-title"><a href="gallery.html">Water Analysis</a></h4>
-                                <a href="assets/img/project/project_2_2.jpg" class="icon-btn popup-image">
+                                <a href="<?=ROOT?>/assets/img/project/project_2_2.jpg" class="icon-btn popup-image">
                                     <i class="far fa-plus"></i>
                                 </a>
                             </div>
@@ -978,13 +978,13 @@
                 <div class="col-xl-4 col-xxl-3">
                     <div class="project-item">
                         <div class="project-img">
-                            <img src="assets/img/project/project_2_3.jpg" alt="project image">
+                            <img src="<?=ROOT?>/assets/img/project/project_2_3.jpg" alt="project image">
                         </div>
                         <div class="project-content">
                             <div class="media-left">
                                 <span class="project-subtitle">Residential Services</span>
                                 <h4 class="box-title"><a href="gallery.html">Equipment Install</a></h4>
-                                <a href="assets/img/project/project_2_3.jpg" class="icon-btn popup-image">
+                                <a href="<?=ROOT?>/assets/img/project/project_2_3.jpg" class="icon-btn popup-image">
                                     <i class="far fa-plus"></i>
                                 </a>
                             </div>
@@ -994,13 +994,13 @@
                 <div class="col-xl-4 col-xxl-3">
                     <div class="project-item">
                         <div class="project-img">
-                            <img src="assets/img/project/project_2_4.jpg" alt="project image">
+                            <img src="<?=ROOT?>/assets/img/project/project_2_4.jpg" alt="project image">
                         </div>
                         <div class="project-content">
                             <div class="media-left">
                                 <span class="project-subtitle">Residential Services</span>
                                 <h4 class="box-title"><a href="gallery.html">Pool Inspections</a></h4>
-                                <a href="assets/img/project/project_2_4.jpg" class="icon-btn popup-image">
+                                <a href="<?=ROOT?>/assets/img/project/project_2_4.jpg" class="icon-btn popup-image">
                                     <i class="far fa-plus"></i>
                                 </a>
                             </div>
@@ -1021,7 +1021,7 @@
                             <p class="testi-item_text">”We're here to make pool maintenance easy & hassle free for you. Contact us today to schedule a service or to learn more about our maintenance plan Thank you for considering poolax.”</p>
                             <div class="testi-item_wrapp">
                                 <div class="testi-item_profile">
-                                    <img src="assets/img/testimonial/testi_3_1.jpg" alt="testimonial">
+                                    <img src="<?=ROOT?>/assets/img/testimonial/testi_3_1.jpg" alt="testimonial">
                                 </div>
                                 <div class="media-body">
                                     <h3 class="box-title">Alex Michel</h3>
@@ -1036,7 +1036,7 @@
                                 </div>
                             </div>
                             <div class="testi-quote">
-                                <img src="assets/img/icon/quote_3.svg" alt="">
+                                <img src="<?=ROOT?>/assets/img/icon/quote_3.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -1045,7 +1045,7 @@
                             <p class="testi-item_text">“We meticulously test and balance the water chemistry during each service visit. This involves adjusting pH, alkalinity, and chlorine levels to maintain a safe and comfortable swimming environment.”</p>
                             <div class="testi-item_wrapp">
                                 <div class="testi-item_profile">
-                                    <img src="assets/img/testimonial/testi_3_2.jpg" alt="testimonial">
+                                    <img src="<?=ROOT?>/assets/img/testimonial/testi_3_2.jpg" alt="testimonial">
                                 </div>
                                 <div class="media-body">
                                     <h3 class="box-title">Dianne Russell</h3>
@@ -1060,7 +1060,7 @@
                                 </div>
                             </div>
                             <div class="testi-quote">
-                                <img src="assets/img/icon/quote_3.svg" alt="">
+                                <img src="<?=ROOT?>/assets/img/icon/quote_3.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -1069,7 +1069,7 @@
                             <p class="testi-item_text">“Parallel task user friendly through supply are chains. Contact us today to schedule a service Dynamically simplify reliable meta service visionary sources unleash tactical.”</p>
                             <div class="testi-item_wrapp">
                                 <div class="testi-item_profile">
-                                    <img src="assets/img/testimonial/testi_3_3.jpg" alt="testimonial">
+                                    <img src="<?=ROOT?>/assets/img/testimonial/testi_3_3.jpg" alt="testimonial">
                                 </div>
                                 <div class="media-body">
                                     <h3 class="box-title">Wade Warren</h3>
@@ -1084,7 +1084,7 @@
                                 </div>
                             </div>
                             <div class="testi-quote">
-                                <img src="assets/img/icon/quote_3.svg" alt="">
+                                <img src="<?=ROOT?>/assets/img/icon/quote_3.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -1093,7 +1093,7 @@
                             <p class="testi-item_text">“Continually utilize 24/365 bandwidth before real-time interfaces. Contact us today to schedule a service Proin mollis, ipsum vel ultrices dictum. Credibly grow users deliver.”</p>
                             <div class="testi-item_wrapp">
                                 <div class="testi-item_profile">
-                                    <img src="assets/img/testimonial/testi_3_1.jpg" alt="testimonial">
+                                    <img src="<?=ROOT?>/assets/img/testimonial/testi_3_1.jpg" alt="testimonial">
                                 </div>
                                 <div class="media-body">
                                     <h3 class="box-title">David Marlo</h3>
@@ -1108,7 +1108,7 @@
                                 </div>
                             </div>
                             <div class="testi-quote">
-                                <img src="assets/img/icon/quote_3.svg" alt="">
+                                <img src="<?=ROOT?>/assets/img/icon/quote_3.svg" alt="">
                             </div>
                         </div>
                     </div>
@@ -1224,7 +1224,7 @@
                 </div>
             </div>
         </div>
-        <section class="blog-sec space overflow-hidden" id="blog-sec" data-bg-src="assets/img/bg/blog_bg_1.jpg">
+        <section class="blog-sec space overflow-hidden" id="blog-sec" data-bg-src="<?=ROOT?>/assets/img/bg/blog_bg_1.jpg">
             <div class="container">
                 <div class="title-area text-center">
                     <span class="sub-title">Blog Posts</span>
@@ -1234,7 +1234,7 @@
                     <div class="col-md-6 col-xl-4">
                         <div class="blog-grid wow fadeInLeft">
                             <div class="blog-img global-img">
-                                <img src="assets/img/blog/blog_3_1.jpg" alt="blog image">
+                                <img src="<?=ROOT?>/assets/img/blog/blog_3_1.jpg" alt="blog image">
                                 <div class="blog-wrapper">
                                     <span class="blog-grid_date">12 Mar 2024</span>
                                 </div>
@@ -1254,7 +1254,7 @@
                     <div class="col-md-6 col-xl-4">
                         <div class="blog-grid wow fadeInRight">
                             <div class="blog-img global-img">
-                                <img src="assets/img/blog/blog_3_2.jpg" alt="blog image">
+                                <img src="<?=ROOT?>/assets/img/blog/blog_3_2.jpg" alt="blog image">
                                 <div class="blog-wrapper">
                                     <span class="blog-grid_date">24 Mar 2024</span>
                                 </div>
@@ -1274,7 +1274,7 @@
                     <div class="col-md-6 col-xl-4">
                         <div class="blog-grid wow fadeInLeft">
                             <div class="blog-img global-img">
-                                <img src="assets/img/blog/blog_3_3.jpg" alt="blog image">
+                                <img src="<?=ROOT?>/assets/img/blog/blog_3_3.jpg" alt="blog image">
                                 <div class="blog-wrapper">
                                     <span class="blog-grid_date">26 nov 2023</span>
                                 </div>
@@ -1300,7 +1300,7 @@
                     <div class="col-xl-3">
                         <div class="contact-media style1">
                             <div class="contact-logo">
-                                <img src="assets/img/Bidput.png" alt="icon" width="150">
+                                <img src="<?=ROOT?>/assets/img/Bidput.png" alt="icon" width="150">
                             </div>
                         </div>
                     </div>
@@ -1308,7 +1308,7 @@
                         <div class="contact-media-wrapp">
                             <div class="contact-media bg-theme">
                                 <div class="contact-media_icon">
-                                    <img src="assets/img/icon/contact_1_1.svg" alt="icon">
+                                    <img src="<?=ROOT?>/assets/img/icon/contact_1_1.svg" alt="icon">
                                 </div>
                                 <div class="contact-media_content">
                                     <span class="contact-media_subtitle">Call Us For Cleaning Services</span>
@@ -1317,7 +1317,7 @@
                             </div>
                             <div class="contact-media">
                                 <div class="contact-media_icon">
-                                    <img src="assets/img/icon/contact_1_2.svg" alt="icon">
+                                    <img src="<?=ROOT?>/assets/img/icon/contact_1_2.svg" alt="icon">
                                 </div>
                                 <div class="contact-media_content">
                                     <p class="contact-media_subtitle">Email Us For Any Info.</p>
@@ -1329,7 +1329,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer-wrapper footer-layout3" data-bg-src="assets/img/bg/footer_bg_3.jpg">
+        <footer class="footer-wrapper footer-layout3" data-bg-src="<?=ROOT?>/assets/img/bg/footer_bg_3.jpg">
             <div class="widget-area">
                 <div class="container">
                     <div class="row justify-content-between">
@@ -1369,7 +1369,7 @@
                                     <div class="recent-post">
                                         <div class="media-img">
                                             <a href="blog-details.html">
-                                                <img src="assets/img/blog/recent-post-2-1.jpg" alt="Blog Image">
+                                                <img src="<?=ROOT?>/assets/img/blog/recent-post-2-1.jpg" alt="Blog Image">
                                             </a>
                                         </div>
                                         <div class="media-body">
@@ -1384,7 +1384,7 @@
                                     <div class="recent-post">
                                         <div class="media-img">
                                             <a href="blog-details.html">
-                                                <img src="assets/img/blog/recent-post-2-2.jpg" alt="Blog Image">
+                                                <img src="<?=ROOT?>/assets/img/blog/recent-post-2-2.jpg" alt="Blog Image">
                                             </a>
                                         </div>
                                         <div class="media-body">
@@ -1427,17 +1427,17 @@
                 <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path></svg>
             </div>
         </footer>
-        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-        <script src="assets/js/slick.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/isotope.pkgd.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/js/jquery-ui.min.js"></script>
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/odometer.js"></script>
-        <script src="assets/js/nice-select.min.js"></script>
-        <script src="assets/js/circle-progress.js"></script>
-        <script src="assets/js/jquery.ripples.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="<?=ROOT?>/assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="<?=ROOT?>/assets/js/slick.min.js"></script>
+        <script src="<?=ROOT?>/assets/js/bootstrap.min.js"></script>
+        <script src="<?=ROOT?>/assets/js/isotope.pkgd.min.js"></script>
+        <script src="<?=ROOT?>/assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="<?=ROOT?>/assets/js/jquery-ui.min.js"></script>
+        <script src="<?=ROOT?>/assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="<?=ROOT?>/assets/js/odometer.js"></script>
+        <script src="<?=ROOT?>/assets/js/nice-select.min.js"></script>
+        <script src="<?=ROOT?>/assets/js/circle-progress.js"></script>
+        <script src="<?=ROOT?>/assets/js/jquery.ripples.js"></script>
+        <script src="<?=ROOT?>/assets/js/main.js"></script>
     </body>
     </html>
