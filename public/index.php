@@ -1,5 +1,5 @@
 <?php
-define('ROOT', 'http://localhost/bidput-cleaners/public');
+require "../app/core/init.php";
 $url = $_GET["url"] ?? 'home';
 $url = explode("/", $url);
 
