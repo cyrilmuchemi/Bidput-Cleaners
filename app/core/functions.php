@@ -1,11 +1,25 @@
 <?php
+define('DBUSER', "root");
+define('DBPASS', "");
+define('DBNAME', "bidput_db");
+define('DBHOST', "localhost");
 
-create_tables();
+function db_query(string $query, array $data = [])
+{
+    $string = "mysql:host=".DBHOST.";dbname=".DBNAME;
+    $con = new PDO($string, DBUSER, DBPASS);
+    $stm = $con->prepare($query);
+    $success = $stm->execute($data); 
+
+    return $success;
+}
+
+//create_tables();
 
 function create_tables()
 {
 
-    $string = "mysql:hostname=localhost;dbname=" .DBNAME;
+    $string = "mysql:hostname=".DBHOST.";dbname=".DBNAME;
     $con = new PDO($string, DBUSER, DBPASS);
 
     $query = "create database if not exists ". DBNAME;
@@ -40,5 +54,20 @@ function create_tables()
     )";
     $stm = $con->prepare($query);
     $stm->execute();
+
+    $query = "CREATE TABLE IF NOT EXISTS blogs (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        image VARCHAR(1024) NULL,
+        title VARCHAR(100) NOT NULL,
+        content TEXT NULL,
+        slug VARCHAR(100) NOT NULL,
+        date DATETIME DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE KEY title (title)
+    )";
+    $stm = $con->prepare($query);
+    $stm->execute();
+
 }
+
+
 

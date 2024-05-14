@@ -76,6 +76,7 @@
 
     <!-- Template Javascript -->
     <script src="<?=ROOT?>/assets/js/main-admin.js"></script>
+    <script src="<?=ROOT?>/assets/js/index.js"></script>
 </body>
 
 </html>
