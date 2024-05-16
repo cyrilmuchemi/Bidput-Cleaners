@@ -1,58 +1,78 @@
 <?php
-header('Content-Type: application/json');
 require_once "../app/core/functions.php";
 
-if (!empty($_POST['data_type'])) {
+class SignupHandler{
+    private $response;
 
-    $errors = [];
-    $response = [];
-
-    if($_POST['data_type'] === 'signup')
+    public function __construct()
     {
+        $this->response = ['success' => false, 'message' => '', 'error' => []];
+    }
+
+    public function handleSignup($postData)
+    {
+        $errors = $this->validateData($postData);
+
+        if(!empty($errors))
+        {
+            $this->response['message'] = "Validation failed";
+            $this->response['errors'] = $errors;
+        }else{
+            $email =  $postData['email'];
+            $existing_mail = db_insert("SELECT id FROM users WHERE email = :email LIMIT 1", ['email' => $email]);
+            if($existing_mail)
+            {
+                $this->response['message'] = "That email already exists";
+            }else {
+                $this->registerUser($postData);
+            }
+        }
+        $this->sendResponse();
+    } 
+
+    public function validateData($data)
+    {
+        $errors = [];
         $required_fields = ['first_name', 'last_name', 'email', 'password'];
-        foreach ($required_fields as $field) {
-            if (empty($_POST[$field])) {
+
+        foreach($required_fields as $field)
+        {
+            if(empty($data[$field]))
+            {
                 $errors[$field] = "Please fill in $field";
             }
         }
+        return $errors;
+    }
 
-        if(empty($errors))
-        {
-            $_POST['user_id'] = create_user_id();
+    public function registerUser($data)
+    {
+        $data['user_id'] = create_user_id();
+        $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+        $data['verify_token'] = md5(rand());
+        $data['role'] = "customer";
 
-            $existing_email = db_query("SELECT id FROM users WHERE email = :email LIMIT 1", ['email' => $_POST['email']]);
-            if ($existing_email) {
-                $errors['email'] = "That email already exists";
-                echo json_encode($response);
-                exit();
-            }
+        $query = "INSERT INTO users (email, first_name, last_name, verify_token, role, password, user_id) VALUES (:email, :first_name, :last_name, :verify_token, :role, :password, :user_id)";
+        $signed = db_query($query, $data);
 
-            $data = [
-                'first_name' => $_POST['first_name'],
-                'last_name' => $_POST['last_name'],
-                'email' => $_POST['email'],
-                'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-                'verify_token' => md5(rand()),
-                'role' => "customer",
-                'user_id' => $_POST['user_id']
-            ];
-
-            $query = "INSERT INTO users (email, first_name, last_name, verify_token, role, password, user_id) VALUES (:email, :first_name, :last_name, :verify_token, :role, :password, :user_id)";
-            $signed = db_query($query, $data);
-
-            if($signed)
-            {
-                $response = ['success' => true, 'message' => 'Registration Successful. Verify your Email to Continue'];
-                sendemail_verify($data['first_name'], $data['email'], $data['verify_token']);
-                $_SESSION['status'] = "Registration Successful! Verify your Email to Continue";
-            }else{
-                $response = ['success' => false, 'message' => 'Registration failed. Please check your details and try again.'];
-            }
-        }
-        else {
-            $response = ['success' => false, 'message' => 'Validation failed', 'errors' => $errors];
+        if ($signed) {
+            $this->response['success'] = true;
+            $this->response['message'] = 'Registration Successful. Verify your Email to Continue';
+            sendemail_verify($data['first_name'], $data['email'], $data['verify_token']);
+            $_SESSION['status'] = "Registration Successful! Verify your Email to Continue";
+        } else {
+            $this->response['message'] = 'Registration failed. Please check your details and try again.';
         }
     }
-    echo json_encode($response);
+
+    private function sendResponse()
+    {
+        header('Content-Type: application/json');
+        echo json_encode($this->response);
+    }
 }
-?>
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['data_type']) && $_POST['data_type'] === 'signup') {
+    $signupHandler = new SignupHandler();
+    $signupHandler->handleSignup($_POST);
+}

@@ -15,18 +15,10 @@ export default class AjaxCalls {
         this.ajax.addEventListener('readystatechange', () => {
             if (this.ajax.readyState === 4) {
                 if (this.ajax.status === 200) {
+                    console.log(this.ajax.responseText);
                     try {
                         const response = JSON.parse(this.ajax.responseText);
-                        if (response.success !== undefined && response.text !== undefined) {
-                            const message = new ToastHandler(response.text, this.displayMessageDiv);
-                            message.displayToast();
-                            if (response.success) {
-                                this.form.reset();
-                            }
-                        } else {
-                            console.error('Invalid JSON response:', response);
-                            this.displayErrorToast('An error has occurred');
-                        }
+                        this.handleResponse(response);
                     } catch (error) {
                         console.error('Error parsing JSON:', error);
                         this.displayErrorToast('An error has occurred');
@@ -46,5 +38,19 @@ export default class AjaxCalls {
     displayErrorToast(message) {
         const errorToast = new ToastHandler(message, this.displayMessageDiv);
         errorToast.displayToast();
+    }
+
+    handleResponse(response){
+        console.log(response);
+
+        if(response.success){
+            const successMsg = response.message;
+            const successToast = new ToastHandler(successMsg, this.displayMessageDiv);
+            successToast.displayToast();
+            this.form.reset();
+        }else {
+            const errMsg = response.message || "An error has occured";
+            this.displayErrorToast(errMsg);
+        }
     }
 }

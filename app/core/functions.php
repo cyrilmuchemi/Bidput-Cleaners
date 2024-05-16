@@ -122,6 +122,27 @@ function db_query_row(string $query, array $data = [])
     }
 }
 
+function db_insert(string $query, array $data = []) {
+    try {
+        $dsn = "mysql:host=".DBHOST.";dbname=".DBNAME;
+        $con = new PDO($dsn, DBUSER, DBPASS);
+        $stm = $con->prepare($query);
+
+        // Bind parameters
+        foreach ($data as $key => $value) {
+            $param_name = is_int($key) ? $key + 1 : ":$key";
+            $stm->bindValue($param_name, $value);
+        }
+
+        // Execute query
+        return $stm->execute();
+    } catch (PDOException $e) {
+        error_log("Database Error: " . $e->getMessage());
+        return false;
+    }
+}
+
+
 function redirect($page)
 {
     header('Location: '.ROOT. '/' . $page);
