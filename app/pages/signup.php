@@ -41,34 +41,30 @@
                         <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <h3>Sign Up</h3>
+                                <div id="ajax-response"></div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Jack">
+                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Jack" required>
                                 <span id="first_name_error" class="error"></span><br>
                                 <label for="floatingText">First Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Mwas">
+                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Mwas" required>
                                 <span id="last_name_error" class="error"></span><br>
                                 <label for="floatingText">Last Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
                                 <span id="email_error" class="error"></span><br>
                                 <label for="floatingInput">Email address</label>
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="0722">
-                                <span id="phone_error" class="error"></span><br>
-                                <label for="floatingText">Phone Number</label>
-                            </div>
                             <div class="form-floating mb-4">
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
                                 <span id="password_error" class="error"></span><br>
                                 <label for="floatingPassword">Password</label>
                             </div>
                             <div class="form-floating mb-4">
-                                <input type="password" class="form-control" id="confirm_password" placeholder="Password">
+                                <input type="password" class="form-control" id="confirm_password" placeholder="Password" required>
                                 <span id="confirm_error" class="error"></span><br>
                                 <label for="floatingPassword">Confirm Password</label>
                             </div>
@@ -83,7 +79,7 @@
                                 </div>
                                 <a href="">Forgot Password</a>
                             </div>
-                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign Up</button>
+                            <button type="submit" id="sign-up-submit" class="btn btn-primary py-3 w-100 mb-4">Sign Up</button>
                             <p class="text-center mb-0">Already have an Account? <a href="<?=ROOT?>/login">Sign In</a></p>
                         </div>
                     </form>
@@ -108,7 +104,7 @@
     <!-- Template Javascript -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="<?=ROOT?>/assets/js/main-admin.js"></script>
-    <script src="<?=ROOT?>/assets/js/index.js"></script>
+    <script src="<?=ROOT?>/assets/js/index.js" type="module"></script>
 </body>
 
 </html>
