@@ -46,18 +46,4 @@ export default class ValidateForm{
         }
         return true;
     }
-
-    validatePasswordConfirmation(password = ''){
-        const newPassword = this.element.value.trim();
-        if(newPassword === '' || newPassword === null){
-            const error = new ToastHandler(`Please retype your Password!`, this.displayDiv);
-            error.displayFormError();
-        }else if(newPassword !== password)
-        {
-            const error = new ToastHandler(`Your Passwords do not match!`, this.displayDiv);
-            error.displayFormError();
-        }
-
-        return true;
-    }
 }

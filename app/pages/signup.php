@@ -63,11 +63,6 @@
                                 <span id="password_error" class="error"></span><br>
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <div class="form-floating mb-4">
-                                <input type="password" class="form-control" id="confirm_password" placeholder="Password" required>
-                                <span id="confirm_error" class="error"></span><br>
-                                <label for="floatingPassword">Confirm Password</label>
-                            </div>
                             <div class="form-group">
                                 <!-- Google reCAPTCHA block -->
                                 <div class="g-recaptcha" data-sitekey="<?= "6LcxQdApAAAAAIR_8CgwiUfHJ52bqPQP0fyw3XTy"?>"></div>

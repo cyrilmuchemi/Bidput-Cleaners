@@ -42,12 +42,5 @@ function validateForm(form){
     if(!passwordTest.validatePassword()){
         isValid = false;
     }
-    //validate confirm password
-    const confirmPass = document.getElementById('confirm_password');
-    const confirmTest = new ValidateForm(confirmPass, 'confirm_error');
-    if(!confirmTest.validatePasswordConfirmation()){
-        isValid = false
-    }
-
     return isValid;
 }
