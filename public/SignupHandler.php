@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require_once 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
 class SignupHandler
 {
@@ -55,9 +55,8 @@ class SignupHandler
 
     private function registerUser($post = [])
     {
-
         $data['user_id'] = $this->createUserId();
-        $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+        $data['password'] = password_hash($post['password'], PASSWORD_DEFAULT);
         $data['verify_token'] = md5(rand());
         $data['role'] = "customer";
         $data['first_name'] = $post['first_name'];
@@ -68,10 +67,9 @@ class SignupHandler
         $signed = $this->db->dbInsert($query, $data);
 
         if ($signed) {
-            $this->response['success'] = true;
-            $this->response['message'] = 'Registration Successful. Verify your Email to Continue';
             $this->sendEmailVerify($data['first_name'], $data['email'], $data['verify_token']);
-            $_SESSION['status'] = "Registration Successful! Verify your Email to Continue";
+            $this->response['message'] = 'Registration Successful. Verify your Email to Continue';
+            $this->response['success'] = true;
         } else {
             $this->response['message'] = 'Registration failed. Please check your details and try again.';
         }
@@ -81,6 +79,7 @@ class SignupHandler
     {
         header('Content-Type: application/json');
         echo json_encode($this->response);
+        exit;
     }
 
     private function createUserId()
@@ -88,10 +87,9 @@ class SignupHandler
         $length = rand(4, 20);
         $number = "";
     
-        for($i = 0; $i < $length; $i++)
-        {
+        for ($i = 0; $i < $length; $i++) {
             $new_rand = rand(0, 9);
-            $number = $number . $new_rand;
+            $number .= $new_rand;
         }
     
         return $number;
@@ -101,38 +99,39 @@ class SignupHandler
     {
         $mail = new PHPMailer(true);
 
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                     
-        $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'bidputcleaners@gmail.com';                     //SMTP username
-        $mail->Password   = 'urzg axst ihba gfqd';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-    
-        //Recipients
-        $mail->setFrom('bidputcleaners@gmail.com', $name);
-        $mail->addAddress($email);     //Add a recipient
-    
-        //Content
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Email verification from Accounts Zone';
-        $mail->Body    = "
-        <h2>You have registered with Bidput Cleaners</h2>
-        <h5>Verify your Email address by clicking the link below!</h5>
-        <a href='http://localhost/bidput-cleaners/public/verify-email?token=$verify_token'>Click Here</a>
-        ";
-        $mail->AltBody = "
-        <h2>You have registered with Bidput Cleaners</h2>
-        <h5>Verify your Email address by clicking the link below!</h5>
-        <a href='http://localhost/bidput-cleaners/public/verify-email?token=$verify_token'>Click Here</a>
-        ";
-        
         try {
-            $mail->send($email);
-            echo 'Message has been sent';
+            // Server settings
+           // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                  
+            $mail->isSMTP();                                          
+            $mail->Host       = 'smtp.gmail.com';                     
+            $mail->SMTPAuth   = true;                                 
+            $mail->Username   = 'bidputcleaners@gmail.com';                    
+            $mail->Password   = 'urzg axst ihba gfqd';                              
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
+            $mail->Port       = 465;                                  
+
+            // Recipients
+            $mail->setFrom('bidputcleaners@gmail.com', 'Bidput Cleaners');
+            $mail->addAddress($email);     
+
+            // Content
+            $mail->isHTML(true);                                  
+            $mail->Subject = 'Email verification from Bidput Cleaners';
+            $mail->Body    = "
+                <h2>You have registered with Bidput Cleaners</h2>
+                <h5>Verify your Email address by clicking the link below!</h5>
+                <a href='http://localhost/bidput-cleaners/public/verify-email?token=$verifyToken'>Click Here</a>
+            ";
+            $mail->AltBody = "
+                You have registered with Bidput Cleaners. 
+                Verify your Email address by clicking the link below! 
+                http://localhost/bidput-cleaners/public/verify-email?token=$verifyToken
+            ";
+        
+            $mail->send();
+            error_log('Message has been sent');
         } catch (Exception $e) {
-            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-        }    
+            error_log("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
+        }
     }
 }
