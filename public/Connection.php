@@ -73,4 +73,20 @@ class Connection{
             return [];
         }
     }
+
+    public function dbUpdate(string $query, array $data = []): bool
+    {
+        try {
+            $stm = $this->pdo->prepare($query);
+            foreach($data as $key => $value)
+            {
+                $param_name = is_int($key) ? $key + 1 : "$key";
+                $stm->bindValue($param_name, $value);
+            }
+            return $stm->execute();
+        } catch (PDOEXception $e) {
+            error_log("Database Update Error: " . $e->getMessage());
+            return false;
+        }
+    }
 }

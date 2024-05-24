@@ -20,6 +20,46 @@ class SignupHandler
         session_start();
     }
 
+    private function sendEmailVerify($firstName, $email, $verifyToken)
+    {
+        $mail = new PHPMailer(true);
+
+        try {
+            // Server settings
+           // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                  
+            $mail->isSMTP();                                          
+            $mail->Host       = 'smtp.gmail.com';                     
+            $mail->SMTPAuth   = true;                                 
+            $mail->Username   = 'bidputcleaners@gmail.com';                    
+            $mail->Password   = 'urzg axst ihba gfqd';                              
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
+            $mail->Port       = 465;                                  
+
+            // Recipients
+            $mail->setFrom('bidputcleaners@gmail.com', 'Bidput Cleaners');
+            $mail->addAddress($email);     
+
+            // Content
+            $mail->isHTML(true);                                  
+            $mail->Subject = 'Email verification from Bidput Cleaners';
+            $mail->Body    = "
+                <h2>You have registered with Bidput Cleaners</h2>
+                <h5>Verify your Email address by clicking the link below!</h5>
+                <a href='http://localhost/bidput-cleaners/public/verify-email?token=$verifyToken'>Click Here</a>
+            ";
+            $mail->AltBody = "
+                You have registered with Bidput Cleaners. 
+                Verify your Email address by clicking the link below! 
+                http://localhost/bidput-cleaners/public/verify-email?token=$verifyToken
+            ";
+        
+            $mail->send();
+            error_log('Message has been sent');
+        } catch (Exception $e) {
+            error_log("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
+        }
+    }
+
     public function handleSignup($postData)
     {
         $errors = $this->validateData($postData);
@@ -95,43 +135,4 @@ class SignupHandler
         return $number;
     }
 
-    private function sendEmailVerify($firstName, $email, $verifyToken)
-    {
-        $mail = new PHPMailer(true);
-
-        try {
-            // Server settings
-           // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                  
-            $mail->isSMTP();                                          
-            $mail->Host       = 'smtp.gmail.com';                     
-            $mail->SMTPAuth   = true;                                 
-            $mail->Username   = 'bidputcleaners@gmail.com';                    
-            $mail->Password   = 'urzg axst ihba gfqd';                              
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
-            $mail->Port       = 465;                                  
-
-            // Recipients
-            $mail->setFrom('bidputcleaners@gmail.com', 'Bidput Cleaners');
-            $mail->addAddress($email);     
-
-            // Content
-            $mail->isHTML(true);                                  
-            $mail->Subject = 'Email verification from Bidput Cleaners';
-            $mail->Body    = "
-                <h2>You have registered with Bidput Cleaners</h2>
-                <h5>Verify your Email address by clicking the link below!</h5>
-                <a href='http://localhost/bidput-cleaners/public/verify-email?token=$verifyToken'>Click Here</a>
-            ";
-            $mail->AltBody = "
-                You have registered with Bidput Cleaners. 
-                Verify your Email address by clicking the link below! 
-                http://localhost/bidput-cleaners/public/verify-email?token=$verifyToken
-            ";
-        
-            $mail->send();
-            error_log('Message has been sent');
-        } catch (Exception $e) {
-            error_log("Message could not be sent. Mailer Error: {$mail->ErrorInfo}");
-        }
-    }
 }
