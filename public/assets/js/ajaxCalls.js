@@ -15,16 +15,13 @@ export default class AjaxCalls {
         this.ajax.addEventListener('readystatechange', () => {
             if (this.ajax.readyState === 4) {
                 if (this.ajax.status === 200) {
-                    console.log(this.ajax.responseText);
                     try {
                         const response = JSON.parse(this.ajax.responseText);
                         this.handleResponse(response);
                     } catch (error) {
-                        console.error('Error parsing JSON:', error);
                         this.displayErrorToast('An error has occurred');
                     }
                 } else {
-                    console.error('Error occurred:', this.ajax.status);
                     this.displayErrorToast('An error has occurred');
                 }
             }

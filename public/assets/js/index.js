@@ -2,17 +2,37 @@ import ValidateForm from './validateForm.js';
 import AjaxCalls from './ajaxCalls.js';
 
 const signupForm = document.getElementById('signupForm');
-const submitSign = document.getElementById('sign-up-submit');
+const submitBtn = document.getElementById('sign-up-submit');
 
-submitSign.addEventListener('click', (e) => {
-    e.preventDefault();
-    if(!validateForm(signupForm)){
-        return;
-    }
-    const ajaxBox = document.getElementById('ajax-response');
-    const ajax = new AjaxCalls(signupForm, 'signup', ajaxBox);
-    ajax.sendData();
-});
+if(submitBtn){
+    submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(!validateForm(signupForm)){
+            return;
+        }
+        const ajaxBox = document.getElementById('ajax-response');
+        const ajax = new AjaxCalls(signupForm, 'signup', ajaxBox);
+        ajax.sendData();
+    });
+}
+
+
+const loginForm = document.getElementById('loginForm');
+const loginBtn = document.getElementById('loginBtn');
+
+if(loginBtn){
+    loginBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(validateLogin(loginForm)){
+           return
+        } 
+        const ajaxBox = document.getElementById('ajax-response');
+        const ajax = new AjaxCalls(loginForm, 'login', ajaxBox);
+        ajax.sendData();
+    });
+}
+
+
 
 function validateForm(form){
 
@@ -43,4 +63,13 @@ function validateForm(form){
         isValid = false;
     }
     return isValid;
+}
+
+function validateLogin(form)
+{
+    const email = document.getElementById('email');
+    const emailTest = new ValidateForm(email, 'email_error');
+    if(!emailTest.validateEmail()){
+        isValid = false;
+    }
 }
